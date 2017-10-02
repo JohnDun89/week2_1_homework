@@ -6,7 +6,7 @@ class TestHomework < MiniTest::Test
 
 
   def setup
-    @team = SportTeam.new('Ultimate Team',['Ian','Frank','Edmond'],'Profesional Peter')
+    @team = SportTeam.new('Ultimate Team',['Ian','Frank','Edmond'],'Profesional Peter', 0)
   end
 
   def test_team_name
@@ -24,6 +24,16 @@ class TestHomework < MiniTest::Test
   def test_new_coach
     @team.change_coach('Home Run Randalph')
     assert_equal('Home Run Randalph', @team.coach)
+  end
+
+  def test_add_player
+    @team.add_player('Paul')
+    assert_equal(4, @team.players.count)
+  end
+
+  def test_check_player
+    check = @team.check_player('Frank')
+    assert_equal(true, check)
   end
 
 
