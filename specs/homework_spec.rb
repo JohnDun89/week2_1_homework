@@ -32,6 +32,13 @@ class TestHomework < MiniTest::Test
    assert_equal("hello, I'm a student", speech)
  end
 
+ def test_language_talk
+   favourite = @student.fav_language("Ruby")
+   assert_equal("I love Ruby", favourite)
+ end
+
+ 
+
 
 
 
