@@ -6,6 +6,7 @@ class TestHomework < MiniTest::Test
 
  def setup
   @student = Student.new('John', 16)
+
  end
 
 
