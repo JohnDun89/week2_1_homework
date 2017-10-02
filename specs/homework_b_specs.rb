@@ -36,6 +36,11 @@ class TestHomework < MiniTest::Test
     assert_equal(true, check)
   end
 
+  def test_result_adder
+    @team.result_adder('Win')
+    assert_equal(1, @team.points)
+  end
+
 
 
 end
