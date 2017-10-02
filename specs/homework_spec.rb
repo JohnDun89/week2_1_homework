@@ -27,6 +27,10 @@ class TestHomework < MiniTest::Test
    assert_equal(5, @student.cohort)
  end
 
+ def test_student_talk
+   speech = @student.talk("hello, I'm a student")
+   assert_equal("hello, I'm a student", speech)
+ end
 
 
 
