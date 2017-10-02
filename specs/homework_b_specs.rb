@@ -21,6 +21,11 @@ class TestHomework < MiniTest::Test
     assert_equal('Profesional Peter', @team.coach)
   end
 
+  def test_new_coach
+    @team.change_coach('Home Run Randalph')
+    assert_equal('Home Run Randalph', @team.coach)
+  end
+
 
 
 end
